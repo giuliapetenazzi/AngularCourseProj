@@ -5,7 +5,7 @@ import { User } from '../../../model/user';
 
 @Component({
   selector: 'hy-catalog-list',
-  //changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
       <h2> Users catalog </h2>
       <ol>

@@ -20,11 +20,11 @@ export class CatalogService {
     });
   }
 
-  save(fValue: any) {
-    console.log("🚀 ~ fValue", fValue);
-    this.http.post<User>(this.usersEndpoint, fValue).subscribe((res) => {
+  save(f: any) {
+    console.log("🚀 ~ f", f);
+    this.http.post<User>(this.usersEndpoint, f.value).subscribe((res) => {
       this.add(res)
-      //todo reset form
+      f.reset();
     });    
   }
 

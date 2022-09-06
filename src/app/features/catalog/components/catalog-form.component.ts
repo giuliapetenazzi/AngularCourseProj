@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'hy-catalog-form',
   template: `
-    <form #f="ngForm" (submit)="save.emit(f.value)">
+    <form #f="ngForm" (submit)="save.emit(f)">
       <input type="text" name="name" ngModel required minlength="3">
       <input type="text" name="address" ngModel required>
       <button type="submit"
